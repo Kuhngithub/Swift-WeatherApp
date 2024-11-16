@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCell" id="KGk-i7-Jjw" customClass="CitiesTableViewCell" customModule="WeatherAppProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1dW-Hx-DEM">
+                        <rect key="frame" x="10" y="9.6666666666666643" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="MbU-ip-k1s"/>
+                            <constraint firstAttribute="height" constant="25" id="lfB-7B-UX6"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="io5-0l-JFG">
+                        <rect key="frame" x="45" y="5.3333333333333321" width="37.333333333333343" height="33.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-Qm-8Sk">
+                                <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8l-JS-7bO">
+                                <rect key="frame" x="0.0" y="19" width="37.333333333333336" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="14K-IY-D9A">
+                        <rect key="frame" x="290" y="13.999999999999998" width="20" height="16.333333333333329"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="0Nb-VJ-G5Z"/>
+                            <constraint firstAttribute="width" constant="20" id="GBo-z8-dSN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="io5-0l-JFG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3tC-tP-7ay"/>
+                    <constraint firstItem="14K-IY-D9A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AHL-r2-no4"/>
+                    <constraint firstItem="io5-0l-JFG" firstAttribute="leading" secondItem="1dW-Hx-DEM" secondAttribute="trailing" constant="10" id="E1d-dw-w6H"/>
+                    <constraint firstAttribute="trailing" secondItem="14K-IY-D9A" secondAttribute="trailing" constant="10" id="T89-3l-zrx"/>
+                    <constraint firstItem="1dW-Hx-DEM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bJK-j7-dgI"/>
+                    <constraint firstItem="1dW-Hx-DEM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="t9x-XD-8oe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="citiesWeatherImageView" destination="1dW-Hx-DEM" id="lGi-8D-dFU"/>
+                <outlet property="cityNameLabel" destination="Zfp-Qm-8Sk" id="Bz0-I2-tlG"/>
+                <outlet property="temperatureLabel" destination="u8l-JS-7bO" id="XZs-BD-FFR"/>
+            </connections>
+            <point key="canvasLocation" x="25.954198473282442" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+    </resources>
+</document>
